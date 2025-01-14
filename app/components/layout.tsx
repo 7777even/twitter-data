@@ -1,3 +1,5 @@
+'use client'
+
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { LayoutDashboard, Database, Send, BarChart2 } from 'lucide-react'
@@ -20,9 +22,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <Link
               key={item.href}
               href={item.href}
-              className={`mt-1 group flex items-center px-2 py-2 text-base leading-6 font-medium rounded-md hover:text-indigo-600 hover:bg-gray-50 ${
-                pathname === item.href ? 'text-indigo-600 bg-gray-100' : 'text-gray-600'
-              }`}
+              className={`mt-1 group flex items-center px-2 py-2 text-base leading-6 font-medium rounded-md hover:text-indigo-600 hover:bg-gray-50 ${pathname === item.href ? 'text-indigo-600 bg-gray-100' : 'text-gray-600'
+                }`}
             >
               <item.icon className="mr-4 h-6 w-6" />
               {item.label}
